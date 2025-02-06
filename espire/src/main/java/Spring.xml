@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?> 
+<beans 
+ xmlns="http://www.springframework.org/schema/beans" 
+ xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+ xmlns:p="http://www.springframework.org/schema/p" 
+ xsi:schemaLocation="http://www.springframework.org/schema/beans 
+ http://www.springframework.org/schema/beans/spring-beans-3.0.xsd"> 
+ 
+<bean id="project" class="com.mycompany.espire.Project"> 
+<constructor-arg value="MIS"></constructor-arg> 
+<constructor-arg value="San Diago"></constructor-arg> 
+</bean> 
+<bean id="employee" class="com.mycompany.espire.Employee">
+<constructor-arg value="100"></constructor-arg>
+<constructor-arg value="Rima"></constructor-arg>
+<constructor-arg value="1000"></constructor-arg>
+<constructor-arg>
+<ref bean="project"></ref>
+</constructor-arg>
+</bean>
+</beans>
